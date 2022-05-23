@@ -1,4 +1,4 @@
-# national-cws-boundary-update
+# National CWS Boundary Update
 A repository to manage the updating of the EPIC/SimpleLab water service boundaries layer with moderated community contributions.
 
 ## How it works
