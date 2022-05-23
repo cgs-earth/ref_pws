@@ -3,13 +3,13 @@ A repository to manage the updating of the EPIC/SimpleLab water service boundari
 
 ## How it works
 
-This repository includes state-based `contribution/{state-code}` directories where community members may submit `.geojson` files associated with each inividual contributed boundary. To create a reproducible workflow, the following Rscripts will be created:
+This repository includes state-based `contribution/{state-code}` directories where community members may submit `.geojson` files associated with each inividual contributed boundary. To create a reproducible workflow, the `runner.R` Rscript will 
 
-1. `R/00_initialize.R`  that imports the first-cut SimpleLab/EPIC boundary layer [published on Hydroshare](http://www.hydroshare.org/resource/6f3386bb4bc945028391cfabf1ea252e)
-2. `R/01_ingest.R` that iterates through the `contribution` folders and `.geojson` files, replacing the appropritate polygons in initial boundary layer with the contributions
-3. `R/02_format.R` that renames variables and adds value-added attributes
-4. `R/03_export.R` that exports the layer to a GeoPackage named `cws.gpkg`
-5. `runner.R` that runs the above scripts int he correct workflow
+1. import the first-cut SimpleLab/EPIC boundary layer [published on Hydroshare](http://www.hydroshare.org/resource/6f3386bb4bc945028391cfabf1ea252e)
+2. iterate through the `contribution` folders and `.geojson` files, replacing the appropritate polygons in initial boundary layer with the contributions
+3. rename variables and adds value-added attributes
+4. export the layer to a GeoPackage named `cws.gpkg`
+5. Update the layer on Hydroshare
 
 
 This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the user's mapped Docker volume. 
