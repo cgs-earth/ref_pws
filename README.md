@@ -16,11 +16,13 @@ This workflow will be packaged into a Dockerfile that builds a Docker image base
 
 ## How to contribute
 
-This is a moderated repository. Any user may open a pull request, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/contribution/MA/MA3035000.geojson), with 3 fields: 
+This is a moderated repository. Any user may open a pull request, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/contribution/MA/MA3035000.geojson), with 6 fields: 
 
 * `pwsid` as {2-letter-state-code}{pwsid number} e.g. `MA3035000`
 * `name`, the name of the water system e.g. `Boston Water and Sewer Service Commission`
 * `source_url`, a URL detailing the dataset or organization where the information came from, if available
 * `contact_email`, the email address for the person providing the file
+* `source_date`, the date that the contributed data was last updated
+* `contribution_date`, the date that the data was contributed
 
 
