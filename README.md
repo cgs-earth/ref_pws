@@ -10,7 +10,7 @@ This repository includes state-based `contribution/{state-code}` directories whe
 3. [ ] replace relevant polygons in TEMM layer with new contributions
 4. [ ] rename variables and add value-added attributes
 5. [x] export the layer to a GeoPackage named `cws.gpkg` for local review
-6. [ ] Update the layer on Hydroshare
+6. [x] Update the layer on Hydroshare
 
 
 This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the user's mapped Docker volume. 
