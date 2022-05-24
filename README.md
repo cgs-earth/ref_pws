@@ -14,6 +14,17 @@ This repository includes state-based `contribution/{state-code}` directories whe
 
 This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the user's mapped Docker volume. 
 
+To run the workflow:
+
+```
+git clone https://github.com/cgs-earth/national-cws-boundary-update
+cd national-cws-boundary-update
+docker build . -t example/example
+docker run -d -v $PWD/02_output:/02_output example/example
+```
+
+`out.gpkg` will be in the directory `02_output`
+
 ## How to contribute
 
 This is a moderated repository. Any user may open a pull request from a fork, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/contribution/MA/MA3035000.geojson), with 6 fields: 
