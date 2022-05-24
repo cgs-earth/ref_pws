@@ -1,5 +1,6 @@
 library(sf)
 library(dplyr)
+library(httr)
 
 
 ## Read, clean, and combine the contributed data
@@ -26,4 +27,16 @@ d <- list.files(
 write_sf(d,"02_output/out.gpkg")
 
 ## Post the data to hydroshare
+
+url <- "https://www.hydroshare.org/hsapi/resource/4bc8f1ee44644268a7b9edbd58b01047/files/test/"
+
+DELETE(paste0("https://www.hydroshare.org/hsapi/resource/4bc8f1ee44644268a7b9edbd58b01047/files/test/",
+              "out.gpkg"), 
+     authenticate("user", "pw"))
+
+POST(url, 
+     body = list(file=upload_file("02_output/out.gpkg")), 
+     encode = "multipart", 
+     authenticate("user", "pw"))
+
 
