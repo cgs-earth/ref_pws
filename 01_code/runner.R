@@ -22,21 +22,29 @@ d <- list.files(
     contribution_date = first(contribution_date)
   )
 
+hs_user <- "HYDROSHARE_USER"
+hs_pw <- "HYDROSHARE_PW"
+
 
 ## Write out the data
-write_sf(d,"02_output/out.gpkg")
+file <- "cws.gpkg"
+path <- paste0("02_output/",file)
+write_sf(d,path)
 
-## Post the data to hydroshare
+## Post the data to hydroshare (DELETES if already exists)
 
-url <- "https://www.hydroshare.org/hsapi/resource/4bc8f1ee44644268a7b9edbd58b01047/files/test/"
+api <- "https://www.hydroshare.org/hsapi/resource/"
+id <- "c9d8a6a6d87d4a39a4f05af8ef7675ad"
+post_url <- paste0(api,id,"/files/./")
+delete_url <- paste0(api,id,"/files/./",file)
 
-DELETE(paste0("https://www.hydroshare.org/hsapi/resource/4bc8f1ee44644268a7b9edbd58b01047/files/test/",
-              "out.gpkg"), 
-     authenticate("user", "pw"))
+try(DELETE(delete_url, 
+     authenticate(hs_user, hs_pw)))
 
-POST(url, 
-     body = list(file=upload_file("02_output/out.gpkg")), 
+POST(post_url, 
+     body = list(file=upload_file(path)), 
      encode = "multipart", 
-     authenticate("user", "pw"))
+     authenticate(hs_user, hs_pw))
 
+unlink("cws.gpkg")
 
