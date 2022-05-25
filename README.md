@@ -21,7 +21,7 @@ To run the workflow:
 git clone https://github.com/cgs-earth/national-cws-boundary-update
 cd national-cws-boundary-update
 docker build . -t example/example
-docker run -d -v $PWD/02_output:/02_output example/example
+docker run example/example
 ```
 
 
