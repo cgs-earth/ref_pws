@@ -13,7 +13,7 @@ This repository includes state-based `contribution/{state-code}` directories whe
 6. [x] Update the layer on Hydroshare
 
 
-This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the user's mapped Docker volume. 
+This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the Hydroshare resource [here](https://www.hydroshare.org/resource/c9d8a6a6d87d4a39a4f05af8ef7675ad/)
 
 To run the workflow:
 
@@ -24,7 +24,6 @@ docker build . -t example/example
 docker run -d -v $PWD/02_output:/02_output example/example
 ```
 
-`out.gpkg` will be in the directory `02_output`
 
 ## How to contribute
 
