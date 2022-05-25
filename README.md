@@ -17,8 +17,8 @@ To run the workflow:
 git clone https://github.com/cgs-earth/national-cws-boundary-update
 cd national-cws-boundary-update
 # change runner.R lines 25 and 26 to add the Hydroshare credentials
-docker build . -t example/example
-docker run example/example
+docker build . -t example/ex
+docker run example/ex
 ```
 
 
