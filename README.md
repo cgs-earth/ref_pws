@@ -7,10 +7,7 @@ This repository includes state-based `contribution/{state-code}` directories whe
 
 1. [x] import the first-cut SimpleLab/EPIC boundary layer [published on Hydroshare](http://www.hydroshare.org/resource/6f3386bb4bc945028391cfabf1ea252e)
 2. [x] iterate through the `contribution` folders and `.geojson` files, reading and combining the contributions
-3. [ ] replace relevant polygons in TEMM layer with new contributions
-4. [ ] rename variables and add value-added attributes
-5. [x] export the layer to a GeoPackage named `cws.gpkg` for local review
-6. [x] Update the layer on Hydroshare
+3. [x] export the layer to a GeoPackage named `cws.gpkg` and update the corresponding file on Hydroshare
 
 
 This workflow will be packaged into a Dockerfile that builds a Docker image based on this repository, and exports a finalized `cws.gpkg` to the Hydroshare resource [here](https://www.hydroshare.org/resource/c9d8a6a6d87d4a39a4f05af8ef7675ad/)
