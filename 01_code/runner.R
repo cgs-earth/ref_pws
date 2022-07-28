@@ -22,7 +22,7 @@ d <- list.files(
     contribution_date = first(contribution_date)
   )
 
-hs_user <- "HYDROSHARE_USER"
+hs_user <- "HYDROSHARE_we"
 hs_pw <- "HYDROSHARE_PW"
 
 
