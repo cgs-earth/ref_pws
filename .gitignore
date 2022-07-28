@@ -38,3 +38,4 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 out.gpkg
+00_data/temm.geojson/temm.geojson
