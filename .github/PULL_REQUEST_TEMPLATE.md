@@ -24,6 +24,7 @@ Source: Describe the source of the data you are contributing. This can be as sim
 ## Please confirm that the following fields are included in your geojson file
 - [ ] pwsid
 - [ ] name
+- [ ] data_source
 - [ ] source_url
 - [ ] contact_email
 - [ ] source_date
