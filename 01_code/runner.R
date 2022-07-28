@@ -17,6 +17,7 @@ d <- list.files(
   summarize(
     name = first(name),
     source_url = first(source_url),
+    data_source = first(data_source),
     contact_email = first(contact_email),
     source_date = first(source_date),
     contribution_date = first(contribution_date)
