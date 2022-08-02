@@ -11,7 +11,7 @@ This repository includes state-based `contribution/{state-code}` directories whe
 
 ## How to contribute
 
-This is a moderated repository. Any user may open a pull request from a fork, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/contribution/MA/MA3035000.geojson), with 7 fields: 
+This is a moderated repository. Any user may open a pull request from a fork, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/00_data/contribution/MA/MA3035000.geojson), with 7 fields: 
 
 * `pwsid` as {2-letter-state-code}{pwsid number} e.g. `MA3035000`
 * `name`, the name of the water system e.g. `Boston Water and Sewer Service Commission`
