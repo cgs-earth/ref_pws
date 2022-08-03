@@ -25,7 +25,7 @@ This is a moderated repository. Any user may open a pull request from a fork, su
    * County boundary with other systems removed
 * `source_url`, a URL detailing the dataset or organization where the information came from, if available
 * `contact_email`, the email address for the person providing the file
-* `source_date`, the date that the contributed data was last updated
-* `contribution_date`, the date that the data was contributed
+* `source_date`, the date that the contributed data was last updated (YYYY-MM-DD)
+* `contribution_date`, the date that the data was contributed (YYYY-MM-DD)
 
 
