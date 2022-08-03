@@ -1,5 +1,5 @@
 # ref_pws: Reference Public Water Systems (PWS) for [geoconnex.us](https://geoconnex.us)
-A repository to manage the creation of a reference feature set of best available boundaries for public water systems in the United States with moderated community contributions. For now, the base layer will be the latest [national dataset created by SimpleLab Inc](https://github.com/SimpleLab-Inc/wsb), which is hosted on [Hydroshare](https://www.hydroshare.org/resource/20b908d73a784fc1a097a3b3f2b58bfb/). Community contributions to this repository are added to this layer, which is then updated with some value added attributes. 
+A repository to manage the creation of a reference feature set of best available boundaries for public water systems (as identified but not spatially defined in the [USEPA Safe Drinking Water Information System](https://echo.epa.gov/tools/data-downloads/sdwa-download-summary)) in the United States with moderated community contributions. For now, the base layer will be the latest [national dataset created by SimpleLab Inc](https://github.com/SimpleLab-Inc/wsb), which is hosted on [Hydroshare](https://www.hydroshare.org/resource/20b908d73a784fc1a097a3b3f2b58bfb/). Community contributions to this repository are added to this layer, which is then updated with some value added attributes. 
 
 ## How it works
 
