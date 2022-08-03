@@ -39,3 +39,5 @@ vignettes/*.pdf
 .Renviron
 out.gpkg
 00_data/temm.geojson/temm.geojson
+02_output/cws.gpkg
+02_output/cws.gpkg
