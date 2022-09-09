@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: internetofwater/cws-compile:ref_pws
+          tags: internetofwater/cws-compile:ref_pws_run
