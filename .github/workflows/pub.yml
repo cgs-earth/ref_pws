@@ -28,6 +28,7 @@ jobs:
           push: true
           tags: internetofwater/cws-compile:ref_pws_run
       - 
+        name: run
         uses: addnab/docker-run-action@v3
         with:
           image: internetofwater/cws-compile:ref_pws_run
