@@ -25,11 +25,12 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          push: true
-          tags: internetofwater/cws-compile:ref_pws_run
+          push: false
+          tags: cws-compile:ref_pws_run
       - 
         name: run
         uses: addnab/docker-run-action@v3
         with:
-          image: internetofwater/cws-compile:ref_pws_run
+          image: cws-compile:ref_pws_run
+          run: Rscript /01_code/runner.R
 
