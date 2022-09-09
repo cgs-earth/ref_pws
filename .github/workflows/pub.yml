@@ -25,7 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          push: false
+          push: true
           tags: internetofwater/cws-compile:ref_pws_run
       - 
         uses: addnab/docker-run-action@v3
