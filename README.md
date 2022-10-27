@@ -17,7 +17,7 @@ This is a moderated repository. In general, if an individual, community, utility
 It is preferred to submit a boundary through GitHub via Pull Request. If you wish to submit a boundary and are unfamiliar with GitHub, please email konda@lincolninst.edu, and we will be happy to assist you.
 
 ### What to contribute
-It is preferred to submit `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/00_data/contribution/MA/MA3035000.geojson), with 7 fields: 
+It is preferred to submit `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/00_data/contribution/MA/MA3035000.geojson), with 8 fields (please make sure all fields are in lower case, or data will not be ingested): 
 
 * `pwsid` as {2-letter-state-code}{pwsid number} e.g. `MA3035000`
 * `name`, the name of the water system e.g. `Boston Water and Sewer Service Commission`
