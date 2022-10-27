@@ -28,4 +28,4 @@ This is a moderated repository. Any user may open a pull request from a fork, su
 * `source_date`, the date that the contributed data was last updated (YYYY-MM-DD)
 * `contribution_date`, the date that the data was contributed (YYYY-MM-DD)
 
-If you wish to submit a boundary and are unfamiliar with GitHub, please email konda@lincolninst.edu, and we will be happy to assist you.
+If you wish to submit a boundary and are unfamiliar with GitHub, please email konda@lincolninst.edu, and we will be happy to assist you. In general, if an individual or community group wishes to submit a boundary, particularly one that overrides one available from an official source, we will ask for specific justifications and data sources. These justifications can be provided in the GitHub pull request or over email. 
