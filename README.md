@@ -12,7 +12,12 @@ This repository includes state-based `contribution/{state-code}` directories whe
 
 ## How to contribute
 
-This is a moderated repository. Any user may open a pull request from a fork, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/00_data/contribution/MA/MA3035000.geojson), with 7 fields: 
+This is a moderated repository. In general, if an individual, community, utility, or community group wishes to submit a boundary, particularly one that overrides one available from an official state source, we will ask for specific justifications and data sources. We may also refer you to contribute your boundary to an official state reporting mechanism if the boundary for the water system is within a state that has such a mechanism. If there is no official state mechanism, justifications and data sources. can be provided in the GitHub pull request or over email. 
+
+It is preferred to submit a boundary through GitHub as decribed below. If you wish to submit a boundary and are unfamiliar with GitHub, please email konda@lincolninst.edu, and we will be happy to assist you.
+
+
+Any user may open a pull request from a fork, submitting a `.geojson` file named `{pwsid}.geojson` to the appropriate state `contribution/{state-code}` directory. The file should be formatted as in this [example](https://github.com/cgs-earth/national-cws-boundary-update/blob/main/00_data/contribution/MA/MA3035000.geojson), with 7 fields: 
 
 * `pwsid` as {2-letter-state-code}{pwsid number} e.g. `MA3035000`
 * `name`, the name of the water system e.g. `Boston Water and Sewer Service Commission`
@@ -28,4 +33,3 @@ This is a moderated repository. Any user may open a pull request from a fork, su
 * `source_date`, the date that the contributed data was last updated (YYYY-MM-DD)
 * `contribution_date`, the date that the data was contributed (YYYY-MM-DD)
 
-If you wish to submit a boundary and are unfamiliar with GitHub, please email konda@lincolninst.edu, and we will be happy to assist you. In general, if an individual or community group wishes to submit a boundary, particularly one that overrides one available from an official source, we will ask for specific justifications and data sources. These justifications can be provided in the GitHub pull request or over email. 
