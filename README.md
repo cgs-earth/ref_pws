@@ -7,7 +7,7 @@ This repository includes state-based `contribution/{state-code}` directories whe
 
 1. [x] iterates through the `contribution` folders and `.geojson` files, reading and combining the contributions
 2. [x] exports the layer to a GeoPackage named `contributed_pws.gpkg` and updates the corresponding file on a dedicated [Hydroshare resource](https://www.hydroshare.org/resource/c9d8a6a6d87d4a39a4f05af8ef7675ad/)
-3. [x] replaces any systems in the [SimpleLab dataset](https://www.hydroshare.org/resource/20b908d73a784fc1a097a3b3f2b58bfb/) with datasets in `contributed_pws.gpkg`, creating an updated `ref_pws.gpkg` in the [dedicated Hydroshare resource](https://www.hydroshare.org/resource/c9d8a6a6d87d4a39a4f05af8ef7675ad/).
+3. [x] replaces any systems in the [SimpleLab dataset](https://www.hydroshare.org/resource/20b908d73a784fc1a097a3b3f2b58bfb/) with datasets in `contributed_pws.gpkg`, creating an updated `ref_pws.gpkg` in the [dedicated Hydroshare resource](https://www.hydroshare.org/resource/c9d8a6a6d87d4a39a4f05af8ef7675ad/). The SimpleLab workflow includes data from official state sources or estimated based on their methods. Where a system is contributed to this repository that is not from an official state source, it is assumed to be of higher quality than the estimated boundaries, which are either Census Place boundaries or circular service reas centered on a facility location. 
 
 
 ## How to contribute
