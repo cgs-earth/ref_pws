@@ -41,3 +41,6 @@ out.gpkg
 00_data/temm.geojson/temm.geojson
 02_output/cws.gpkg
 02_output/cws.gpkg
+00_data/temm.gpkg
+02_output/ref_pws.gpkg
+01_code/code2.R

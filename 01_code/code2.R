@@ -6,13 +6,15 @@ library(readr)
 
 sf::sf_use_s2(FALSE)
 ## Read, clean, and combine the contributed data
+read_transform <- function(x) {sf::st_transform(sf::st_make_valid(sf::st_read(x)),4326)}
+
 d <- list.files(
   path = "00_data/contribution",
   pattern = ".geojson",
   recursive = TRUE,
   full.names = TRUE
 ) %>%
-  lapply(st_read) %>%
+  lapply(read_transform) %>%
   map_dfr(~mutate(., across(-geometry, as.character))) %>%
   st_zm() %>%
   bind_rows() %>%
@@ -25,7 +27,7 @@ d <- list.files(
     source_date = first(source_date),
     contribution_date = first(contribution_date),
     service_area_type = first(service_area_type),
-    tier = "Tier 1"
+    tier = "1"
   ) %>%
   rename(pws_name = name)
 
@@ -111,13 +113,13 @@ for(i in d$pwsid){
 
 x <- x %>% mutate(BOUNDARY_TYPE = case_when(
   tier == "none" ~ "no boundary",
-  tier == "Tier 1" ~ "Water Service Area - as specified in source_url",
-  tier == "Tier 2a" ~ "Unknown Service Area - Using relevant U.S. Census Places Catographic Boundary Polygon to represent PWS",
-  tier == "Tier 3" ~ "Unknown Service Area - Using EPA ECHO facility location with buffered radius to represent PWS")
+  tier == "1" ~ "Water Service Area - as specified in source_url",
+  tier == "2" ~ "Unknown Service Area - Using relevant U.S. Census Places Catographic Boundary Polygon to represent PWS",
+  tier == "3" ~ "Unknown Service Area - Using EPA ECHO facility location with buffered radius to represent PWS")
 )
 
-hs_user <- "changme"
-hs_pw <- "changeme"
+hs_user <- "cgsiow"
+hs_pw <- "IoWAdmin!"
 
 
 ## Write out the data
@@ -153,7 +155,7 @@ delete_ref_url <- "https://www.hydroshare.org/hsapi/resource/3295a17b4cc24d34bd6
 contributed_delete_url <- paste0(api,id,"/files/./",contributed_file)
 
 try(DELETE(delete_url, 
-     authenticate(hs_user, hs_pw), timeout(300)))
+           authenticate(hs_user, hs_pw), timeout(300)))
 
 try(DELETE("https://www.hydroshare.org/hsapi/resource/3295a17b4cc24d34bd6a5c5aaf753c50/files/./pws.csv",
            authenticate(hs_user,hs_pw), timeout(300)))
