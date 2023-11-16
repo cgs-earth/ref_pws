@@ -84,11 +84,11 @@ x <- x %>% mutate(wholesaler=case_when(
 x$uri <- paste0("https://geoconnex.us/ref/pws/",x$pwsid)
 
 states <- sf::read_sf("https://reference.geoconnex.us/collections/states/items?skipGeometry=true") %>% 
-  select(uri,STUSPS) %>% 
+  select(uri,stusps) %>% 
   st_drop_geometry() %>% 
   rename(state_uri = uri)
 
-x <- left_join(x,states,by=c("state_code" = "STUSPS"))
+x <- left_join(x,states,by=c("state_code" = "stusps"))
 
 for(i in d$pwsid){
   x$geometry[which(x$pwsid==i)] <- d$geometry[which(d$pwsid==i)]
